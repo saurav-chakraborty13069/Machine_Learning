@@ -1,0 +1,91 @@
+Machine Learning
+Supervised/unsupervised/reinforcement
+OLS Stats Model
+	import statsmodels.formula.api as sm
+	ols = sm.OLS(endog = y, exog = x).fit()
+	print(ols.summary())
+Linear Regression
+	from sklearn.linear_model import LinearRegressor
+L1 Regularization
+	from sklearn.linear_model import Lasso
+L2 Regularization
+	from sklearn.linear_model import Ridge
+R Squared
+	from sklearn.metrics import r2_score
+Adjusted R Squared
+Mean Square Error
+08040161616
+============================================
+
+Logistic Regression
+	from sklearn.linear_model import LogisticRegressor
+Diff Between Logistic and Linear Regression
+Why Regression cannot be used for classification problems
+Decision tree and Gini index
+	from sklearn.tree import DecisionTreeClassifier
+random forest
+	randomly selects features to build a bunch of decision trees
+	bagging ensemble methods
+	average of all decision trees is the fianl prediction
+pruning
+	pre pruning - early stopinf criteria
+	post pruning
+methods to control split
+ensemble - bagging boosting
+classification metrics
+randomisedsearch and gridsearch cv
+	Grid Search
+		exhaustive approach to fine tuning the parameters and finding the optimum parameters to build the model
+		time consuming
+		all combinations verified
+		
+	Randomised search
+		not so exhaustive
+		faster
+		randomly selects parameters to test the optimal hyperparameter values
+
+
+===========================================
+
+Hetereoscedasticity 
+the spread of the data. the difference and spread of data and ranges between the largest and the smallest value of a feature
+redefining the variables - 
+weighted regression - 
+
+Multicollinearity
+the concept where multiple variables are correlated to each other and related.
+
+KNN
+hamming, euclidean, minkowski, manhattan
+
+pipeline
+from sklearn.pipeline import Pipeline
+steps = [('imputation', Imputer(missing_values='NaN', strategy = 'most_frequent', axis=0)), ('clf', DecisionTreeClassifier())] 
+pipeline = Pipeline(steps) 
+clf = pipeline.fit(X_train,y_train)```
+
+PCA
+dimensionality reduction technique of dataset consisting of multiple variables correlated with each other.
+retains the variation present in the datset by transforming the variables to a new set of variables known as principle components
+these variables are ordered and the variation decreases as we move down the order.
+
+t-SNE - t-Distributed Stochastic Neighbor Embedding
+dimensionality reduction technique for non linear data that maps multiple dimension data into lower two dimensions suitable for human obsevation.
+
+outliers
+Detection 
+Standard Deviation, boxplots, violin plots
+
+Encoding Techniques
+Bias Variance Tradeoff
+Type1 and Type2 Error
+binomial and polynomial dist
+mean meadian mode STD
+Mean Absolute Error
+normalization methods
+min max and standard 
+diff betw normalization and standardization
+
+================================================
+
+
