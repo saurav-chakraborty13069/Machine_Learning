@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promotion Prediction</title>
+</head>
+<body>
+    <h1>Make Predictions</h1>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Predict Now</legend>
+            <div>
+                {{ form.dep.label }}
+                {% if form.dep.errors %}
+                    {% for error in form.dep.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.dep }}
+            </div>
+            <div>
+                {{ form.reg.label }}
+                {% if form.reg.errors %}
+                    {% for error in form.reg.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.reg }}
+            </div>
+            <div>
+                {{ form.edu.label }}
+                {% if form.edu.errors %}
+                    {% for error in form.edu.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.edu }}
+            </div>
+            <div>
+                {{ form.gen.label }}
+                {% if form.gen.errors %}
+                    {% for error in form.gen.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.gen }}
+            </div>
+            <div>
+                {{ form.rec.label }}
+                {% if form.rec.errors %}
+                    {% for error in form.rec.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.rec }}
+            </div>
+            <div>
+                {{ form.trn.label }}
+                {% if form.trn.errors %}
+                    {% for error in form.trn.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.trn }}
+            </div>
+            <div>
+                {{ form.age.label }}
+                {% if form.age.errors %}
+                    {% for error in form.age.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.age }}
+            </div>
+            <div>
+                {{ form.rat.label }}
+                {% if form.rat.errors %}
+                    {% for error in form.rat.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.rat }}
+            </div>
+            <div>
+                {{ form.srv.label }}
+                {% if form.srv.errors %}
+                    {% for error in form.srv.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.srv }}
+            </div>
+            <div>
+                {{ form.kpi.label }}
+                {% if form.kpi.errors %}
+                    {% for error in form.kpi.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.kpi }}
+            </div>
+            <div>
+                {{ form.awd.label }}
+                {% if form.awd.errors %}
+                    {% for error in form.awd.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.awd }}
+            </div>
+            <div>
+                {{ form.scr.label }}
+                {% if form.scr.errors %}
+                    {% for error in form.scr.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.scr }}
+            </div>
+            <div>
+                {{ form.submit }}
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+</html>
