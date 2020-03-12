@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iris Prediction</title>
+</head>
+<body>
+    <h1>Make Predictions</h1>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Predict Now</legend>
+            <div>
+                {{ form.sl.label }}
+                {% if form.sl.errors %}
+                    {% for error in form.sl.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.sl }}
+            </div>
+            <div>
+                {{ form.sw.label }}
+                {% if form.sw.errors %}
+                    {% for error in form.sw.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.sw }}
+            </div>
+            <div>
+                {{ form.pl.label }}
+                {% if form.pl.errors %}
+                    {% for error in form.pl.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.pl }}
+            </div>
+            <div>
+                {{ form.pw.label }}
+                {% if form.pw.errors %}
+                    {% for error in form.pw.errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endif %}
+                {{ form.pw }}
+            </div>
+            <div>
+                {{ form.submit }}
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+</html>

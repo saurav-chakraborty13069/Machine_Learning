@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Predictions
+    </title>
+</head>
+<body class="container">
+    <h3>Data You Predicted IS:</h3>
+    <br>
+    <div>
+        <span>{{ value }}</span>
+    </div>
+    <br>
+    <form method="GET" action="{{ url_for('home') }}">
+        <button type="submit">Home</button>
+    </form>
+</body>
+</html>
