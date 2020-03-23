@@ -1,0 +1,17 @@
+#.gitlab-ci.yml
+
+stages:
+    - python
+
+python:
+    image: python:3.7
+    stage: python
+    script:
+        - pwd
+        - python --version
+        - pip3 install --upgrade tensorflow
+        - pip3 install pandas
+        - pip3 install numpy
+        - pip3 install sklearn
+        - pip install pickle-mixin
+        - python3 ./ML_Projects/ML_Models/Cats\ and\ Dogs\ \ CNN/cnn.py
