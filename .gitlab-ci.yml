@@ -15,4 +15,5 @@ python:
         - pip3 install sklearn
         - pip3 install pickle-mixin
         - pip3 install keras
+        - pip3 install pillow
         - python3 ./ML_Projects/ML_Models/Cats_and_Dogs_CNN/cnn.py
