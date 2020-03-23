@@ -21,6 +21,7 @@ from keras.wrappers.scikit_learn import KerasClassifier
 from tensorflow.keras.layers import Dropout
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from keras.preprocessing import image
+from keras.models import load_model
 '''
 # Initialising the CNN
 classifier = Sequential()
@@ -122,7 +123,7 @@ classifier.fit_generator(training_set,
 #==========================================================================
 
 #predicting new image
-test_image = image.load_img('./ML_Projects/ML_Models/Cats_and_Dogs_CNN/dataset/single_prediction/cat_or_dog_3.jpg', target_size = (64,64))
+test_image = image.load_img('./ML_Projects/ML_Models/Cats_and_Dogs_CNN/dataset/single_prediction/cat_or_dog_3.jpg', target_size = (256,256))
 test_image = image.img_to_array(test_image)
 test_image = np.expand_dims(test_image, axis = 0)
 result = classifier.predict(test_image)
@@ -132,23 +133,12 @@ else:
     prediction = 'cat'
 
 #==========================================================================
-'''
-classifier.save('dataset//model.h5')
-joblib.dump(classifier, 'dataset//joblib_model.pkl') 
-pickle.dump(classifier, open('pickle_model.pkl','wb'))
-'''
-'''
-import h5py
-filename = 'file.hdf5'
-f = h5py.File(filename, 'r')
+classifier.save('./ML_Projects/ML_Models/Cats_and_Dogs_CNN/my_model.h5')  # creates a HDF5 file 'my_model.h5'
+#del model  # deletes the existing model
 
-# List all groups
-print("Keys: %s" % f.keys())
-a_group_key = list(f.keys())[0]
-
-# Get the data
-data = list(f[a_group_key])
-'''
+# returns a compiled model
+# identical to the previous one
+#model = load_model('my_model.h5')
 #===========================================================================
 
 
