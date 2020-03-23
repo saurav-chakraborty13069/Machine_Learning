@@ -13,5 +13,5 @@ python:
         - pip3 install pandas
         - pip3 install numpy
         - pip3 install sklearn
-        - pip3 install pickle
+        - pip install pickle-mixin
         - python3 ./ML_Projects/ML_Models/Cats\ and\ Dogs\ \ CNN/cnn.py
