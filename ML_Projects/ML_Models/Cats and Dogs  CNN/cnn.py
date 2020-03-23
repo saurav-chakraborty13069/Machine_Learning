@@ -21,7 +21,7 @@ from keras.wrappers.scikit_learn import KerasClassifier
 from tensorflow.keras.layers import Dropout
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from keras.preprocessing import image
-
+'''
 # Initialising the CNN
 classifier = Sequential()
 # Step 1 - Convolution
@@ -64,7 +64,7 @@ classifier.fit_generator(training_set,
                         epochs=50,
                         validation_data=test_set,
                         validation_steps=2023)
-
+'''
 #==============================================================================
 
 target_size = (256, 256)
@@ -119,7 +119,7 @@ classifier.fit_generator(training_set,
                         validation_steps=2023)
 
 
-==========================================================================
+#==========================================================================
 
 #predicting new image
 test_image = image.load_img('dataset/single_prediction/cat_or_dog_3.jpg', target_size = (64,64))
@@ -131,11 +131,12 @@ if result[0][0] == 1:
 else:
     prediction = 'cat'
 
-==========================================================================
-
+#==========================================================================
+'''
 classifier.save('dataset//model.h5')
 joblib.dump(classifier, 'dataset//joblib_model.pkl') 
 pickle.dump(classifier, open('pickle_model.pkl','wb'))
+'''
 '''
 import h5py
 filename = 'file.hdf5'
