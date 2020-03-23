@@ -1,2 +1,10 @@
 #.gitlab-ci.yml
 
+stages:
+    - python
+
+python:
+    image: python:3.7
+    script:
+        - pwd
+        - python --version
