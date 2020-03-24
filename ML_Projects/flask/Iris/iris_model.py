@@ -13,7 +13,7 @@ import numpy as np
 import pickle, requests, json
 
 #Importing Dataset
-dataset = pd.read_csv("C:\=====OTHERS=====\Flask\iris_deploy\iris2.csv")
+dataset = pd.read_csv("./ML_Projects/flask/Iris/iris2.csv")
 
 X = dataset.drop(['iris'],axis=1)
 y = dataset['iris']
@@ -38,4 +38,4 @@ accuracy = metrics.accuracy_score(test_y, y_pred)
 accuracy
 
 #saving model to disk
-pickle.dump(logistic_classifier, open('model.pkl','wb'))
+pickle.dump(logistic_classifier, open('./ML_Projects/flask/Iris/model1.pkl','wb'))
