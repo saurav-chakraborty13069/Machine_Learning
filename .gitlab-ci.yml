@@ -14,6 +14,8 @@ python:
         - pip3 install numpy
         - pip3 install sklearn
         - pip3 install pickle-mixin
+        - pip install requests
+        - pip install jsonlib
         # - pip3 install keras
         # - pip3 install pillow
         - python3 ./ML_Projects/flask/Iris/iris_model.py
