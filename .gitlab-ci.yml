@@ -9,11 +9,12 @@ python:
     script:
         - pwd
         - python --version
-        - pip3 install --upgrade tensorflow
+        # - pip3 install --upgrade tensorflow
         - pip3 install pandas
         - pip3 install numpy
         - pip3 install sklearn
         - pip3 install pickle-mixin
-        - pip3 install keras
-        - pip3 install pillow
-        - python3 ./ML_Projects/ML_Models/Cats_and_Dogs_CNN/cnn.py
+        # - pip3 install keras
+        # - pip3 install pillow
+        - python3 ./ML_Projects/flask/Iris/iris_model.py
+
