@@ -114,7 +114,7 @@ classifier.fit_generator(training_set,
 
 #============================================================================
 
-
+'''
 
 test_image = image.load_img('dataset/single_prediction/cat_or_dog_3.jpg', target_size = (256,256))
 test_image = image.img_to_array(test_image)
@@ -125,7 +125,7 @@ if result[0][0] == 1:
 else:
     prediction = 'cat'
     
-    
+   ''' 
     
     
     
